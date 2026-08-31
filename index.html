@@ -77,6 +77,16 @@
     letter-spacing: -0.015em;
   }
 
+  .claim {
+    font-family: Lora, Georgia, serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    color: var(--terracota);
+    margin: -0.4rem 0 0;
+    max-width: 34ch;
+  }
+
   h1 {
     font-family: Lora, Georgia, serif;
     font-weight: 400;
@@ -322,18 +332,29 @@
 
   .contacto h2 { max-width: none; }
 
-  .mail {
+  .mail,
+  .social {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.3;
     color: var(--terracota);
     text-decoration: none;
-    border-bottom: 1px solid var(--terracota);
-    padding-bottom: 3px;
-    align-self: flex-start;
     font-weight: 500;
-    word-break: break-all;
   }
 
-  .mail:hover { color: var(--tinta); border-bottom-color: var(--tinta); }
+  .mail svg,
+  .social svg { width: 1.15em; height: 1.15em; flex-shrink: 0; }
+
+  .mail span,
+  .social span { border-bottom: 1px solid var(--terracota); padding-bottom: 2px; }
+
+  .mail:hover,
+  .social:hover { color: var(--tinta); }
+
+  .mail:hover span,
+  .social:hover span { border-bottom-color: var(--tinta); }
 
   .canales {
     display: flex;
@@ -341,20 +362,6 @@
     align-items: center;
     gap: 0.9rem 2rem;
   }
-
-  .social {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--terracota);
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-  }
-
-  .social svg { width: 20px; height: 20px; flex-shrink: 0; }
-
-  .social:hover { color: var(--tinta); }
 
   a:focus-visible {
     outline: 2px solid var(--terracota);
@@ -385,6 +392,7 @@
       </svg>
       <span class="wordmark">Cardinal</span>
     </div>
+    <p class="claim">Lo que tu área de RR.HH. necesita para ser la mejor</p>
     <h1>Las decisiones sobre personas también se pueden <em>fundamentar</em>.</h1>
     <p class="entrada">Somos psicología y datos en el mismo lugar. Evaluamos, acompañamos y medimos — para que lo que se decide sobre la gente deje de apoyarse solamente en la intuición de quien decide.</p>
   </header>
@@ -537,11 +545,11 @@
       </div>
       <div class="credencial">
         <dt>Formación del equipo</dt>
-        <dd>Licenciados en Psicología<br>Licenciados en Economía<br>Analistas en Sistemas y Científicos de Datos</dd>
+        <dd>Licenciados en Psicología<br>Licenciados en Economía<br>Analistas en Sistemas de Información</dd>
       </div>
       <div class="credencial">
         <dt>Especialización</dt>
-        <dd>Psicología laboral y clínica<br>Data Science, Machine Learning y automatización</dd>
+        <dd>Psicología Laboral<br>Psicología Clínica<br>Data Science, Machine Learning y automatización</dd>
       </div>
       <div class="credencial">
         <dt>Idiomas</dt>
@@ -566,7 +574,13 @@
 
     <p>Esa primera conversación es para entender el problema, no para vender: <strong>si no es algo que podamos resolver, lo decimos.</strong></p>
     <div class="canales">
-      <a class="mail" href="mailto:people.cardinal@gmail.com">people.cardinal@gmail.com</a>
+      <a class="mail" href="mailto:people.cardinal@gmail.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2.5" y="5" width="19" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"></rect>
+          <path d="M3.5 7 L12 13.2 L20.5 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <span>people.cardinal@gmail.com</span>
+      </a>
       <a class="social" href="https://instagram.com/cardinal.consultora">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"></rect>
