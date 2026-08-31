@@ -74,6 +74,30 @@
     margin: 0;
   }
 
+  /* ---------- navegación ---------- */
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.8rem;
+    padding: 1.15rem 0;
+    border-bottom: 1px solid var(--linea);
+  }
+
+  .nav a {
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+    color: var(--tinta-suave);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+  }
+
+  .nav a:hover { color: var(--terracota); border-bottom-color: var(--terracota); }
+
+  html { scroll-behavior: smooth; }
+  section { scroll-margin-top: 1.5rem; }
+
   /* ---------- secciones ---------- */
 
   section {
@@ -311,7 +335,14 @@
     <p class="entrada">Somos psicología y datos en el mismo lugar. Evaluamos, acompañamos y medimos — para que lo que se decide sobre la gente deje de apoyarse solamente en la intuición de quien decide.</p>
   </header>
 
-  <section>
+  <nav class="nav">
+    <a href="#servicios">Servicios</a>
+    <a href="#people-analytics">People analytics</a>
+    <a href="#ejemplos">Ejemplos</a>
+    <a href="#quien">Quién está detrás</a>
+  </nav>
+
+  <section id="servicios">
     <p class="eyebrow">Servicios</p>
     <h2>Tres frentes, un mismo criterio</h2>
 
@@ -361,9 +392,12 @@
       </div>
     </div>
 
-    <div class="cruce">
-      <p class="cruce-tag">Donde se cruzan las dos formaciones</p>
-      <h3>People analytics y medición de resultados</h3>
+  </section>
+
+  <section id="people-analytics">
+    <p class="eyebrow">People analytics</p>
+    <h2>Medir si lo que se hace con la gente funciona</h2>
+      
       <p>Casi todo lo que hace Recursos Humanos se compra por intuición y no se mide nunca. Se contrata un programa de bienestar, se corre una capacitación, se cambia el proceso de selección — y un año después nadie sabe si algo de eso movió la aguja, porque nunca se definió cuál era la aguja.</p>
 
       <div class="cruce-cols">
@@ -380,11 +414,10 @@
       </div>
 
       <p>Un consultor de recursos humanos no construye el modelo. Un científico de datos no sabe qué preguntarle a la gente. <strong>Esto necesita las dos cosas al mismo tiempo, y por eso casi nadie lo ofrece.</strong></p>
-    </div>
   </section>
 
-  <section>
-    <p class="eyebrow">Un ejemplo</p>
+  <section id="ejemplos">
+    <p class="eyebrow">Ejemplos</p>
     <h2>Lo que tu sistema de RRHH no puede ver</h2>
 
     <div class="hallazgo">
@@ -403,7 +436,7 @@
       <p>Todo eso es lo que hay en un sistema de recursos humanos, y es sobre lo que se actúa: se revisan sueldos, se cambia la modalidad, se reorganizan áreas. <strong>Lo que sí explica cómo está la gente —el jefe directo, si el trabajo tiene sentido, lo que cuesta estar ahí— no está en ninguna base de datos.</strong> A eso se llega preguntando, con instrumentos hechos para eso.</p>
     </div>
 
-    <h2>Dos más, de la misma base</h2>
+    <h2>Otros dos, de la misma base</h2>
 
     <div class="hallazgo">
       <h3>La discusión sobre volver a la oficina está mal planteada</h3>
@@ -424,7 +457,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="quien">
     <p class="eyebrow">Quién está detrás</p>
     <h2>Cardinal es Luis Gaetano</h2>
     <p>Cardinal es un estudio chico y no pretende parecer otra cosa: el que atiende la primera reunión es el mismo que hace el trabajo. Luis empezó como analista de datos en 2015 y hoy dirige Gestión de Información y Command Center en una empresa con operaciones en Argentina y Brasil. En el medio estudió psicología, que no es un dato de color: es la razón por la que los modelos preguntan cosas que a otro no se le ocurren. Cuando lo que predecís es si alguien renuncia, vuelve a llamar o compra, entender por qué la gente hace lo que hace cambia qué variables construís.</p>
